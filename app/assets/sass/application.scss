@@ -406,6 +406,7 @@ margin: 0;
     max-width: 138px;
   }
 }
+
 .task-completed--block {
   float: none;
   clear: left;
@@ -415,6 +416,10 @@ margin: 0;
   }
   background: #dee0e2;
   color: $black;
+}
+.task-list-section .task-completed--block {
+  margin-top: 0;
+  margin-left: 5px;
 }
 .task-list--lowercase {
   .task-completed {
