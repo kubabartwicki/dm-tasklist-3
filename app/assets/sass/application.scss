@@ -421,6 +421,10 @@ margin: 0;
   margin-top: 0;
   margin-left: 5px;
 }
+.task-list--blue-badges .task-completed--block {
+  color: #fff;
+  background-color: #005ea5;
+}
 .task-list--lowercase {
   .task-completed {
     margin-top: 2px;
