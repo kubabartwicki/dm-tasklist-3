@@ -57,7 +57,7 @@
             <ol class="task-list task-list--lowercase task-list--transparent task-list--start-page task-list--short-margin task-list--small-titles task-list--with-lines task-list--with-numbers task-list--no-indent task-list--with-badges task-list--blue-badges" style="margin-left: -35px">
               <li {% if data.step == '1' and data.noCurrentStep != '1' %}class="current-step"{% endif %}>
                 <h2 class="task-list-section">
-                  <span class="task-list-section-number">1</span> Save a search {% if data.step and data.step > '1' and data.noCurrentStep != '1' %}<strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>{% endif %}
+                  <span class="task-list-section-number">1</span> Save a search
                 </h2>
                 <p class="task-list-description">Choose search terms based on your <a href="/guidance#requirements">requirements</a>. Save your search to keep a record of the category, keywords and filters you used. You must assess all the services that meet your search terms.</p>
                 {% if data.step and data.step != '0' %}
@@ -85,16 +85,16 @@
                         See a list of your saved search terms
                       </a>
                     {% endif %}
+                    {% if data.step and data.step > '1' and data.noCurrentStep != '1' %}<div style="clear:left;margin-top: 0px">
+                      <strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>
+                    </div>
+                    {% endif %}
                   </li>
                 </ul>
               </li>
               <li {% if data.step == '2' and data.noCurrentStep != '1' %}class="current-step"{% endif %}>
                 <h2 class="task-list-section">
                   <span class="task-list-section-number">2</span> Download your results
-                  {% if data.step == '3' or data.step == '4' or data.step == '5' %}<strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>{% endif %}
-                  {% if data.step == '1' %}
-                    <strong class="task-completed task-cant-start task-completed--block" id="company-information-completed">Can't start yet</strong>
-                  {% endif %}
                 </h2>
                 <p class="task-list-description">Download a copy of your results when you’re ready to assess the services you've found. Add them to your audit trail or use them to help you review services.</p>
                 <ul class="task-list-items task-list-items--single-task">
@@ -108,9 +108,15 @@
                       <p class="browse-list-item-status-angry"><strong>You have too many services to review. Refine your search terms until you have fewer than 30 results.</strong></p>
                     {% endif %}
                     {% if data.step == '3' or data.step == '4' or data.step == '5' %}
-                    <a class="task-name" href="/download-1?flash=0" style="">
+                    <a class="task-name" href="/download-1?flash=0" style="margin-bottom:10px">
                       Download your results again
                     </a>
+                    <div style="clear:left;margin-top: 0px">
+                      <strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>
+                    </div>
+                    {% endif %}
+                    {% if data.step == '1' %}
+                      <strong class="task-completed task-cant-start task-completed--block" id="company-information-completed">Can't start yet</strong>
                     {% endif %}
                   </li>
                 </ul>
@@ -118,9 +124,6 @@
               <li {% if data.step == '3' and data.noCurrentStep != '1' %}class="current-step"{% endif %}>
                 <h2 class="task-list-section">
                   <span class="task-list-section-number">3</span> Review services
-                  {% if data.step and data.step > '3' and data.noCurrentStep != '1' %}<strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>{% elseif data.step < '3' and data.noCurrentStep != '1'%}
-                      <strong class="task-completed task-cant-start task-completed--block" id="company-information-completed">Can't start yet</strong>
-                    {% endif %}
                 </h2>
                 <p class="task-list-description"><a href="#">Compare the services you found</a> to find the one that best meets your budget and requirements. <a href="#">You can contact the suppliers to ask questions</a>, but you must not negotiate with them about the details of their service.</p>
                 <ul class="task-list-items task-list-items--single-task">
@@ -130,15 +133,17 @@
                       I have reviewed my search results
                     </a>
                     {% endif %}
+                    {% if data.step and data.step > '3' and data.noCurrentStep != '1' %}
+                      <strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>
+                    {% elseif data.step < '3' and data.noCurrentStep != '1'%}
+                      <strong class="task-completed task-cant-start task-completed--block" id="company-information-completed">Can't start yet</strong>
+                    {% endif %}
                   </li>
                 </ul>
               </li>
               <li {% if data.step == '4' and data.noCurrentStep != '1' %}class="current-step"{% endif %}>
                 <h2 class="task-list-section">
                   <span class="task-list-section-number">4</span> Award a contract
-                  {% if data.step and data.step > '4' and data.noCurrentStep != '1' %}<strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>{% elseif data.step < '4' and data.noCurrentStep != '1'%}
-                      <strong class="task-completed task-cant-start task-completed--block" id="company-information-completed">Can't start yet</strong>
-                    {% endif %}
                 </h2>
                 <p class="task-list-description">When you have chosen the winning service, follow the guidance on <a href="#">how to award a contract</a>. Check whether you need to <a href="#">publish the contract on Contracts Finder</a>.</p>
                 <ul class="task-list-items task-list-items--single-task">
@@ -148,14 +153,17 @@
                       I have awarded the contract
                     </a>
                     {% endif %}
+                    {% if data.step and data.step > '4' and data.noCurrentStep != '1' %}
+                      <strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>
+                    {% elseif data.step < '4' and data.noCurrentStep != '1'%}
+                      <strong class="task-completed task-cant-start task-completed--block" id="company-information-completed">Can't start yet</strong>
+                    {% endif %}
                   </li>
                 </ul>
               </li>
               <li {% if data.step == '5' and data.noCurrentStep != '1' %}class="current-step"{% endif %}>
                 <h2 class="task-list-section">
-                  <span class="task-list-section-number">5</span> Declare the outcome{% if data.step and data.step < '5' and data.noCurrentStep != '1' %}
-                    <strong class="task-completed task-cant-start task-completed--block" id="company-information-completed">Can't start yet</strong>
-                  {% endif %}
+                  <span class="task-list-section-number">5</span> Declare the outcome
                 </h2>
                 <p class="task-list-description">Tell us if you bought a service or not. Knowing the outcome of your saved search helps us to improve the Digital Marketplace. You also need to <a href="#">complete the Customer Benefits Record form</a>.</p>
                 <ul class="task-list-items task-list-items--single-task">
@@ -165,7 +173,9 @@
                       Declare the outcome
                     </a>
                   {% endif %}
-                  
+                  {% if data.step and data.step < '5' and data.noCurrentStep != '1' %}
+                    <strong class="task-completed task-cant-start task-completed--block" id="company-information-completed">Can't start yet</strong>
+                  {% endif %}
                   </li>
                 </ul>
               </li>

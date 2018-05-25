@@ -425,6 +425,10 @@ margin: 0;
   color: #fff;
   background-color: #005ea5;
 }
+.task-completed--block.task-cant-start {
+  background: #dee0e2;
+  color: $black;
+}
 .task-list--lowercase {
   .task-completed {
     margin-top: 2px;
