@@ -593,10 +593,10 @@ margin: 0;
 
 .task-list--with-lines > li {
   &:before {
-    height: 1px;
+    height: 2px;
     display: block;
     content: " ";
-    background: #BFC1C3;
+    background: #dee0e2;
     margin-top: 10px;
     margin-bottom: 20px;
     margin-left: 25px;
