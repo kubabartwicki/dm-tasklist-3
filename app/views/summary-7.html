@@ -91,7 +91,7 @@
               <li {% if data.step == '2' and data.noCurrentStep != '1' %}class="current-step"{% endif %}>
                 <h2 class="task-list-section">
                   <span class="task-list-section-number">2</span> Download your results
-                  {% if data.step == '3' or data.step == '4' or data.step == '5' %}<strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>{% endif %}
+                  {% if data.step == '3' or data.step == '4' or data.step == '5' or data.step == '6' %}<strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>{% endif %}
                   {% if data.step == '1' %}
                     <strong class="task-completed task-cant-start task-completed--block" id="company-information-completed">Can't start yet</strong>
                   {% endif %}
@@ -107,7 +107,7 @@
                     {% if data.step =='1' %}
                       <p class="browse-list-item-status-angry"><strong>You have too many services to review. Refine your search terms until you have fewer than 30 results.</strong></p>
                     {% endif %}
-                    {% if data.step == '3' or data.step == '4' or data.step == '5' %}
+                    {% if data.step == '3' or data.step == '4' or data.step == '5' or data.step == '6' %}
                     <a class="task-name" href="/download-1?flash=0" style="">
                       Download your results again
                     </a>
@@ -156,8 +156,14 @@
                   <span class="task-list-section-number">5</span> Declare the outcome{% if data.step and data.step < '5' and data.noCurrentStep != '1' %}
                     <strong class="task-completed task-cant-start task-completed--block" id="company-information-completed">Can't start yet</strong>
                   {% endif %}
+                  {% if data.step == '6' %}<strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>{% endif %}
                 </h2>
                 <p class="task-list-description">Tell us if you bought a service or not. Knowing the outcome of your saved search helps us to improve the Digital Marketplace. You also need to <a href="#">complete the Customer Benefits Record form</a>.</p>
+                {% if data.step == '6' %}
+                <p class="search-summary task-list-description task-list-description--toolkit">
+                    Contract awarded to Amazon Glacier
+                </p>
+                {% endif %}
                 <ul class="task-list-items task-list-items--single-task">
                   <li class="task-list-item">
                   {% if data.step == '5' or data.step == '3' and data.noCurrentStep == '1' or data.step == '4' and data.noCurrentStep == '1' %}
@@ -165,7 +171,6 @@
                       Declare the outcome
                     </a>
                   {% endif %}
-                  
                   </li>
                 </ul>
               </li>
