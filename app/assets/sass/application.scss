@@ -894,3 +894,31 @@ a.can-click, input[type="submit"].can-click, button.can-click {
 .multiple-choice label li {
   list-style-type: disc;
 }
+
+.button.button-secondary, .button-secondary-with-advice {
+background-color: #dee0e2;
+position: relative;
+display: -moz-inline-stack;
+display: inline-block;
+padding: .526315em .789473em .263157em;
+border: none;
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+-webkit-appearance: none;
+-webkit-box-shadow: 0 2px 0 #b5babe;
+-moz-box-shadow: 0 2px 0 #b5babe;
+box-shadow: 0 2px 0 #b5babe;
+font-size: 1em;
+line-height: 1.25;
+text-decoration: none;
+-webkit-font-smoothing: antialiased;
+cursor: pointer;
+color: #0b0c0c;
+}
+.button-secondary:hover, .button-secondary:focus, .button-secondary-with-advice:hover, .button-secondary-with-advice:focus {
+background-color: #d0d3d6;
+}
+.button-secondary:link, .button-secondary:hover, .button-secondary:focus, .button-secondary:visited, .button-secondary-with-advice:link, .button-secondary-with-advice:hover, .button-secondary-with-advice:focus, .button-secondary-with-advice:visited {
+color: #0b0c0c;
+}

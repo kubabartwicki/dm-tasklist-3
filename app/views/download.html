@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% set logged_in = true %}
+{% set previousStep = '/ur?step=3' %}
 {% block page_title %}
   Download your results – Digital Marketplace
 {% endblock %}
@@ -19,6 +20,7 @@
         <li><a href="/">Your account</a></li>
         <li><a href="/">Your saved searches</a></li>
         <li><a class="can-click" href="{{ previousStep }}">Buying some cloud software</a></li>
+        <li>Download your results</li>
     </ol>
   </nav>
 </div>
@@ -46,7 +48,7 @@
         </div>
         {% endif %}
         <div class="column-two-thirds">
-          <header class="page-heading-smaller page-heading-without-breadcrumb">
+          <header class="page-heading page-heading-without-breadcrumb">
             <h1>
               Download your results
             </h1>
