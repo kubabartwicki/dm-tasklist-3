@@ -922,3 +922,56 @@ background-color: #d0d3d6;
 .button-secondary:link, .button-secondary:hover, .button-secondary:focus, .button-secondary:visited, .button-secondary-with-advice:link, .button-secondary-with-advice:hover, .button-secondary-with-advice:focus, .button-secondary-with-advice:visited {
 color: #0b0c0c;
 }
+
+
+
+
+
+/* 
+custom stuff here
+(some above too)
+*/
+
+#search_ended_table {
+  padding-top: 0;
+}
+.return-to-overview {
+  margin-top: 20px;
+}
+.form-group--date, .form-group--text {
+  h3 em {
+    font-weight: bold;
+    font-style: normal;
+  }
+  h3 .form-hint {
+    padding: 0px 0 10px 0;
+  }
+  fieldset {
+    max-width: 300px;
+  }
+  .column-third {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 50px;
+    box-sizing: content-box;
+  }
+  .column-third:first-child {
+    padding-left: 0;
+  }
+  .column-third:last-child {
+    padding-right: 0;
+    max-width: 75px;
+  }
+  .form-control {
+    width: 100%;
+  }
+  &:nth-child(2), &:nth-child(3) {
+    margin-top: 30px;
+  }
+  .button--submit {
+    margin-top: 40px;
+  }
+}
+.banner-success-without-action {
+  margin-bottom: 40px;
+}

@@ -18,7 +18,7 @@
     <ol class="group" role="breadcrumbs">
         <li><a href="/">Digital Marketplace</a></li>
         <li><a href="/">Your account</a></li>
-        <li><a href="/">Your saved searches</a></li>
+        <li><a href="/">Your saved search terms</a></li>
         <li><a class="can-click" href="{{ previousStep }}">Buying some cloud software</a></li>
         <li>Download your results</li>
     </ol>
@@ -42,7 +42,7 @@
         <div class="column-full">
           <div class="banner-success-without-action">
               <p class="banner-message">
-                Your search results are ready to download.
+                Results exported. Your files are ready to download.
               </p>
           </div>
         </div>
@@ -58,10 +58,10 @@
       <form method="post" action="{{ previousStep }}">
         <div class="grid-row">
           <div class="column-two-thirds">
-           <p>Add a copy of your results to your audit trail or use them to help you review and compare services.</p>
-           <p style="margin-top:10px">You must assess all the services in your search results.</p>
+           <p>Download service descriptions and supplier contact details to help you assess services.</p>
+           <p style="margin-top:10px">Keep a copy of your results to prove which services met your saved search terms.</p>
            
-           <ul class="document-list" style="margin-top:20px">
+           <ul class="document-list" style="margin-top:20px;margin-bottom:-20px">
              
                <li class="document-list-item">
                  <a href="?flash=0" data-analytics="trackEvent" data-analytics-category="Direct Award" data-analytics-action="Download search results format" data-analytics-label="ODS" class="document-link-with-icon can-click">
@@ -79,19 +79,22 @@
              
            </ul>
 
-           <p style="margin-top:-20px">Both file types include:</p>
-           <ul class="list list-bullet">
-             <li>service names, descriptions and prices</li>
-             <li>supplier names and contact details</li>
-             <li>your saved search terms</li>
-             <li>links to detailed service description pages on the Digital Marketplace</li>
-           </ul>
-           <p style="margin-top:10px">You can download your results again at any time.</p>
+           <p class="" style="    border-left: 5px solid #BFC1C3;
+    color: inherit;
+    padding-bottom: 2px;
+    font-weight: normal;
+    margin-left: 0;
+    padding-left: 15px;
+    margin-bottom: 30px;margin-top:15px;
+    line-height: 1.25;padding-top:4px;">
+                    Results exported on Monday 4 June 2018 at 12:01pm BST
+                </p>
 
-            <br>
+           <p style="margin-top:0">You can download your results again at any time.</p>
 
-            <p class="return-to-overview">
-              <a href="{{ previousStep }}" class="can-click button button-save">Continue</a>
+
+            <p class="return-to-overview" style>
+              <a href="{{ previousStep }}" class="can-click ">Return to your task list</a>
             </p>
           </div>
         </div>

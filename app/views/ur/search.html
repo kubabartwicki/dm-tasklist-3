@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
-{% set action = '/ur/login' %}
-
+{% set action = '/ur/save-search' %}
+{% set logged_in = true %}
 {% block page_title %}
   Search – Digital Marketplace
 {% endblock %}
@@ -42,7 +42,7 @@
           </div> -->
           <div class="button-save-wrapper button-save-wrapper--2-lines">
             <div class="save-button save-button--big">
-              <form action="{{ action }}">
+              <form action="{{ action }}" method="post">
               <button id="save-search" class="can-click button button--submit" role="button" type="submit" data-analytics="trackEvent" data-analytics-category="Direct Award" data-analytics-action="Save search" data-analytics-label="19248">
                 Save your search terms
               </button>
@@ -68,8 +68,9 @@
   </div>
   <div class="container-hidden hidden" id="container-hidden">
     <p>Add keywords until the results meet all your requirements.</p>
-    <p>Put a ‘-’ before a word to exclude it.</p>
+    <p>Put a ‘<code style="font-family: Consolas, Monaco, 'Lucida Console', monospace;">-</code>’ before a word to exclude it.</p>
     <p>Use double quote marks to find services that match an exact phrase.</p>
+    <p>Read <a href="#" style="pointer-events:none">how to use keyword search</a>.</p>
   </div>
   <script>
     document.getElementById('dm-search-help-link').addEventListener('click', function(e) {
@@ -314,136 +315,136 @@
 <div id="js-dm-live-search-results" class="js-dm-live-search-fade" style="opacity: 1;">
   
 <div class="search-result">
-  <h2 class="search-result-title">
-        <a href="/g-cloud/services/106197559190884">Drupal Development Service</a>
-    </h2>
+    <h2 class="search-result-title">
+          <a href="/g-cloud/services/516268538036802">Drupal 8 Upgrade</a>
+      </h2>
 
-    <p class="search-result-supplier">
-        CTI Digital
-    </p>
+      <p class="search-result-supplier">
+          CTI Digital
+      </p>
 
-    <p class="search-result-excerpt">
-        CTI’s Drupal Development Service consistently delivers high ­quality digital services in a predictable and cost­ effective manner. Teams are equally capable enhancing existing Drupal solutions, architecting new platforms. Reflecting extensive public sector experience, naturally our rigorous processes satisfies concerns relating to quality assurance, accessibility, security and governance. 
-    </p>
-    <ul aria-label="tags" class="search-result-metadata">
-        <li class="search-result-metadata-item-inline">
-            Cloud software
-        </li>
-        <li class="search-result-metadata-item-inline">
-            G-Cloud 9
-        </li>
-    </ul>
-</div>
+      <p class="search-result-excerpt">
+          Drupal 8 is the latest version of a Content Management System (CMS) widely adopted in the public sector. Our experts have a refined process which expedites migration of your existing Drupal 6 &amp; Drupal 7 services to Drupal 8 so you may benefit from the improvements to this modern system 
+      </p>
+      <ul aria-label="tags" class="search-result-metadata">
+          <li class="search-result-metadata-item-inline">
+              Cloud software
+          </li>
+          <li class="search-result-metadata-item-inline">
+              G-Cloud 9
+          </li>
+      </ul>
+  </div>
 
-<div class="search-result">
-  <h2 class="search-result-title">
-        <a href="/g-cloud/services/261985733657863">SharePoint Development</a>
-    </h2>
+  <div class="search-result">
+    <h2 class="search-result-title">
+          <a href="/g-cloud/services/740250125679679">Microsoft Office 365</a>
+      </h2>
 
-    <p class="search-result-supplier">
-        Cloud Cover IT Limited
-    </p>
+      <p class="search-result-supplier">
+          Glemnet Ltd
+      </p>
 
-    <p class="search-result-excerpt">
-        To design and tailor SharePoint to our clients' individual needs and implement the software to allow the client to use it to its best effect. 
-    </p>
-    <ul aria-label="tags" class="search-result-metadata">
-        <li class="search-result-metadata-item-inline">
-            Cloud software
-        </li>
-        <li class="search-result-metadata-item-inline">
-            G-Cloud 9
-        </li>
-    </ul>
-</div>
+      <p class="search-result-excerpt">
+          Microsoft Office 365 is a cloud-based service that offers robust security, reliability, and user productivity.Office 365 includes Microsoft Office desktop suite with cloud-based versions including Microsoft Exchange Online, Microsoft SharePoint Online, Office Online, and Skype for Business Online—to help users be productive from virtually anywhere through the Internet. 
+      </p>
+      <ul aria-label="tags" class="search-result-metadata">
+          <li class="search-result-metadata-item-inline">
+              Cloud software
+          </li>
+          <li class="search-result-metadata-item-inline">
+              G-Cloud 9
+          </li>
+      </ul>
+  </div>
 
-<div class="search-result">
-  <h2 class="search-result-title">
-        <a href="/g-cloud/services/668319198536167">Advanced Grant Management (GoPro AGM)</a>
-    </h2>
+  <div class="search-result">
+    <h2 class="search-result-title">
+          <a href="/g-cloud/services/239801926288232">Drupal Consultancy Service</a>
+      </h2>
 
-    <p class="search-result-supplier">
-        CIVIC
-    </p>
+      <p class="search-result-supplier">
+          CTI Digital
+      </p>
 
-    <p class="search-result-excerpt">
-        The GoPro AGM enables organisations to effectively manage Grants and applications from disbursements, through availability announcement, assessment, award, activation and monitoring throughout the Grant lifecycle. Applications and projects are easy to set up and manage, with secure sign-on via a Stakeholder Portal wherever a user has access to the Internet. 
-    </p>
-    <ul aria-label="tags" class="search-result-metadata">
-        <li class="search-result-metadata-item-inline">
-            Cloud software
-        </li>
-        <li class="search-result-metadata-item-inline">
-            G-Cloud 9
-        </li>
-    </ul>
-</div>
+      <p class="search-result-excerpt">
+          Delivering digital services can be challenging and risky. With a wealth of sector experience, CTI’s Drupal Consulting Service is designed to streamline a path to the ‘right solution’. Engaging your stakeholders structured workshops achieves requirements capture. Rigorous analysis culminates in an architecture maximising benefits of adopting Drupal. 
+      </p>
+      <ul aria-label="tags" class="search-result-metadata">
+          <li class="search-result-metadata-item-inline">
+              Cloud software
+          </li>
+          <li class="search-result-metadata-item-inline">
+              G-Cloud 9
+          </li>
+      </ul>
+  </div>
 
-<div class="search-result">
-  <h2 class="search-result-title">
-        <a href="/g-cloud/services/469081669287967">SharePoint Online Project Portals</a>
-    </h2>
+  <div class="search-result">
+    <h2 class="search-result-title">
+          <a href="/g-cloud/services/875633446401893">Gaia Moodle Platform</a>
+      </h2>
 
-    <p class="search-result-supplier">
-        Business Cloud Integration Ltd.
-    </p>
+      <p class="search-result-supplier">
+          Gaia Technologies Plc
+      </p>
 
-    <p class="search-result-excerpt">
-        Deploying SharePoint project portals help organisations manage projects with maximum efficiency and minimal risk. SharePoint project portals help organisations get the most from their employees and assets, run more efficient projects, effectively share knowledge and resources, and manage compliance requirements with granular permissions, enhanced auditing features, and clear reporting dashboards. 
-    </p>
-    <ul aria-label="tags" class="search-result-metadata">
-        <li class="search-result-metadata-item-inline">
-            Cloud software
-        </li>
-        <li class="search-result-metadata-item-inline">
-            G-Cloud 9
-        </li>
-    </ul>
-</div>
+      <p class="search-result-excerpt">
+          The Moodle platform is a free--and open source--course management system (CMS) that was originally developed by Moodle. The Moodle platform is used all over the world to host learning management systems for schools and universities' classes and training modules. 
+      </p>
+      <ul aria-label="tags" class="search-result-metadata">
+          <li class="search-result-metadata-item-inline">
+              Cloud software
+          </li>
+          <li class="search-result-metadata-item-inline">
+              G-Cloud 9
+          </li>
+      </ul>
+  </div>
 
-<div class="search-result">
-  <h2 class="search-result-title">
-        <a href="/g-cloud/services/531456785891409">SharePoint Online Business Process Automation</a>
-    </h2>
+  <div class="search-result">
+    <h2 class="search-result-title">
+          <a href="/g-cloud/services/254212377531497">Managed Hosting Service - Content Development &amp; Deployment</a>
+      </h2>
 
-    <p class="search-result-supplier">
-        Business Cloud Integration Ltd.
-    </p>
+      <p class="search-result-supplier">
+          Larmer Brown Limited
+      </p>
 
-    <p class="search-result-excerpt">
-        Helping organisations to streamline and automate business processes to increase efficiency, encourage process consistency across their organisations, help enforce compliance, and easily track processes from beginning to end. 
-    </p>
-    <ul aria-label="tags" class="search-result-metadata">
-        <li class="search-result-metadata-item-inline">
-            Cloud software
-        </li>
-        <li class="search-result-metadata-item-inline">
-            G-Cloud 9
-        </li>
-    </ul>
-</div>
+      <p class="search-result-excerpt">
+          Provision of Cloud based responsive and adaptive eLearning Content creation tool including all technical, support, training and consultancy services. 
+      </p>
+      <ul aria-label="tags" class="search-result-metadata">
+          <li class="search-result-metadata-item-inline">
+              Cloud software
+          </li>
+          <li class="search-result-metadata-item-inline">
+              G-Cloud 9
+          </li>
+      </ul>
+  </div>
 
-<div class="search-result">
-  <h2 class="search-result-title">
-        <a href="/g-cloud/services/768136591979608">Microsoft Azure Cloud Adoption, Consultancy &amp; Implementation Services</a>
-    </h2>
+  <div class="search-result">
+    <h2 class="search-result-title">
+          <a href="/g-cloud/services/677113657576362">Microsoft Dynamics 365 / CRM Implementation</a>
+      </h2>
 
-    <p class="search-result-supplier">
-        Tisski Limited
-    </p>
+      <p class="search-result-supplier">
+          Esuasive
+      </p>
 
-    <p class="search-result-excerpt">
-        Full range of advice &amp; guidance, supply &amp; delivery and transition services for adopting Microsoft Azure Cloud Technologies. 
-    </p>
-    <ul aria-label="tags" class="search-result-metadata">
-        <li class="search-result-metadata-item-inline">
-            Cloud software
-        </li>
-        <li class="search-result-metadata-item-inline">
-            G-Cloud 9
-        </li>
-    </ul>
-</div>
+      <p class="search-result-excerpt">
+          End-to-end Microsoft Dynamics 365 solution design and project delivery, including: project management; road mapping; business process definition; fit gap analysis; PoC / solution prototyping; solution design;  configuration and customisation; systems integration; data cleansing and data migration; testing; training; deployment and business adoption; hypercare; long-term support. 
+      </p>
+      <ul aria-label="tags" class="search-result-metadata">
+          <li class="search-result-metadata-item-inline">
+              Cloud software
+          </li>
+          <li class="search-result-metadata-item-inline">
+              G-Cloud 9
+          </li>
+      </ul>
+  </div>
 </div>
   </section>
 
