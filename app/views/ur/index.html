@@ -140,7 +140,7 @@
               </li>
               <li {% if data.step == '3' and data.noCurrentStep != '1' %}class="current-step"{% endif %}>
                 <h2 class="task-list-section">
-                  <span class="task-list-section-number">3</span> Assess services
+                  <span class="task-list-section-number">3</span> Start assessing services
                   {% if data.step and data.step > '3' and data.noCurrentStep != '1' %}<strong class="task-completed task-completed--block" id="company-information-completed">Completed</strong>{% elseif data.step < '3' and data.noCurrentStep != '1' and data.step != '0' %}
                       <strong class="task-completed task-cant-start task-completed--block" id="company-information-completed">Can't start yet</strong>
                     {% endif %}
