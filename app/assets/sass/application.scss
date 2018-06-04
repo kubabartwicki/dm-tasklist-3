@@ -845,7 +845,7 @@ a.can-click, input[type="submit"].can-click, button.can-click {
     position: relative;
     z-index: 1;
     &:first-child {
-      padding-top: 20px;
+      padding-top: 0;
     }
     &:after {
       background: transparent; 
