@@ -206,7 +206,27 @@
         <div class="column-one-third dmspeak">
           <ul style="padding-top:10px;border-top: 4px solid #005ea5;margin-top:30px">
             <li style="margin-bottom: -10px;">
-              <p>You’re on step 3 of 5: <br/><span class="bold">Review services</span></p>
+              {% if data.step < 5 %}
+              <p>You’re on step {{ data.step }} of 5: <br/><span class="bold">
+                {% if data.step == '1' %}
+                  Save a search
+                {% elseif data.step == '2' %}
+                  Export your results
+                {% elseif data.step == '3' %}
+                  Start assessing services
+                {% elseif data.step == '4' %}
+                  Award a contract
+                {% endif %}
+              </span>
+              </p>
+              {% endif %}
+              <p>
+              {% if data.step == '5' and data.not_awarded != '1' %}
+                Contract awarded to Gaia Moodle Platform
+              {% elseif data.step == '5' and data.not_awarded == '1' %}
+                No suitable services found
+              {% endif %}
+              </p>
             <li>
               <a href="/archive" style="pointer-events: none">Archive this search</a>
             </li>
